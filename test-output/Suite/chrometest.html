@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>TestNG:  chrometest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>chrometest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jan 13 22:20:48 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>147 seconds (147799 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestClass.NewTest.locateStateOnSelectingIndia()'><b>locateStateOnSelectingIndia</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>0</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.displayListOfLanguages()'><b>displayListOfLanguages</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>5</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.errorOnInvalidEmail()'><b>errorOnInvalidEmail</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>20</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.errorOnBlankFields()'><b>errorOnBlankFields</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>21</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.openWebsite()'><b>openWebsite</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>3</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.navigateBackToHome()'><b>navigateBackToHome</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>4</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.autoSuggestion()'><b>autoSuggestion</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>20</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.locateSearchBox()'><b>locateSearchBox</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>0</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.displayFirstCourseDetails()'><b>displayFirstCourseDetails</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>5</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.courseLevelSelection()'><b>courseLevelSelection</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>3</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.newTabSwitch()'><b>newTabSwitch</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>7</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.displayListOfLevel()'><b>displayListOfLevel</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>0</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.displaySecondCourseDetails()'><b>displaySecondCourseDetails</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>0</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.locateForEnterprise()'><b>locateForEnterprise</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>4</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.submitFormVerification()'><b>submitFormVerification</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>21</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>0</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.courseLanguageSelection()'><b>courseLanguageSelection</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>3</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.errorOnInvalidMobile()'><b>errorOnInvalidMobile</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>22</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.locateCourseForCampus()'><b>locateCourseForCampus</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>0</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+<tr>
+<td title='TestClass.NewTest.locateForm()'><b>locateForm</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>0</td>
+<td>TestClass.NewTest@4ee203eb</td></tr>
+</table><p>
+</body>
+</html>

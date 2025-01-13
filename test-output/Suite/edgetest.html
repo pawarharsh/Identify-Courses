@@ -1,0 +1,430 @@
+<html>
+<head>
+<title>TestNG:  edgetest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>edgetest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>12/1/7</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jan 13 22:20:48 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>58 seconds (58169 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestClass.NewTest.locateForEnterprise()'><b>locateForEnterprise</b><br>Test class: TestClass.NewTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a data-click-key=&quot;front_page.front_page_story.click.seo_directory_link&quot; data-click-value=&quot;{&amp;quot;href&amp;quot;:&amp;quot;/business?utm_campaign=website&amp;amp;utm_content=corp-to-home-footer-for-enterprise&amp;amp;utm_medium=coursera&amp;amp;utm_source=enterprise&amp;quot;,&amp;quot;namespace&amp;quot;:{&amp;quot;action&amp;quot;:&amp;quot;click&amp;quot;,&amp;quot;app&amp;quot;:&amp;quot;front_page&amp;quot;,&amp;quot;component&amp;quot;:&amp;quot;seo_directory_link&amp;quot;,&amp;quot;page&amp;quot;:&amp;quot;front_page_story&amp;quot;},&amp;quot;schema_type&amp;quot;:&amp;quot;FRONTEND&amp;quot;}&quot; data-track=&quot;true&quot; data-track-app=&quot;front_page&quot; data-track-page=&quot;front_page_story&quot; data-track-action=&quot;click&quot; data-track-component=&quot;seo_directory_link&quot; data-track-href=&quot;/business?utm_campaign=website&amp;amp;utm_content=corp-to-home-footer-for-enterprise&amp;amp;utm_medium=coursera&amp;amp;utm_source=enterprise&quot; href=&quot;/business?utm_campaign=website&amp;amp;utm_content=corp-to-home-footer-for-enterprise&amp;amp;utm_medium=coursera&amp;amp;utm_source=enterprise&quot; to=&quot;/business?utm_campaign=website&amp;amp;utm_content=corp-to-home-footer-for-enterprise&amp;amp;utm_medium=coursera&amp;amp;utm_source=enterprise&quot; class=&quot;rc-SubFooterSection__content-column-link-text&quot;&gt;...&lt;/a&gt; is not clickable at point (93, 542). Other element would receive the click: &lt;div class=&quot;rc-CopyrightV2 lohp-rebrand&quot;&gt;...&lt;/div&gt;
+  (Session info: MicrosoftEdge=131.0.2903.146)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [785749b8f707fe02556fa55da62a5431, clickElement {id=f.355A7E391798E74831A7CB6ECDA99436.d.31AD662910BDE5A308A4076B90F229C3.e.288}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 131.0.2903.146, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55964}, msedge: {msedgedriverVersion: 131.0.2903.146 (99fcb90c1ee..., userDataDir: C:\Users\2373652\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55964/devtoo..., se:cdpVersion: 131.0.2903.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (785749b8f707fe02556fa55da62a5431)] -&gt; link text: For Enterprise]
+Session ID: 785749b8f707fe02556fa55da62a5431
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at TestClass.NewTest.locateForEnterprise(NewTest.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1628282140", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1628282140'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a data-click-key=&quot;front_page.front_page_story.click.seo_directory_link&quot; data-click-value=&quot;{&amp;quot;href&amp;quot;:&amp;quot;/business?utm_campaign=website&amp;amp;utm_content=corp-to-home-footer-for-enterprise&amp;amp;utm_medium=coursera&amp;amp;utm_source=enterprise&amp;quot;,&amp;quot;namespace&amp;quot;:{&amp;quot;action&amp;quot;:&amp;quot;click&amp;quot;,&amp;quot;app&amp;quot;:&amp;quot;front_page&amp;quot;,&amp;quot;component&amp;quot;:&amp;quot;seo_directory_link&amp;quot;,&amp;quot;page&amp;quot;:&amp;quot;front_page_story&amp;quot;},&amp;quot;schema_type&amp;quot;:&amp;quot;FRONTEND&amp;quot;}&quot; data-track=&quot;true&quot; data-track-app=&quot;front_page&quot; data-track-page=&quot;front_page_story&quot; data-track-action=&quot;click&quot; data-track-component=&quot;seo_directory_link&quot; data-track-href=&quot;/business?utm_campaign=website&amp;amp;utm_content=corp-to-home-footer-for-enterprise&amp;amp;utm_medium=coursera&amp;amp;utm_source=enterprise&quot; href=&quot;/business?utm_campaign=website&amp;amp;utm_content=corp-to-home-footer-for-enterprise&amp;amp;utm_medium=coursera&amp;amp;utm_source=enterprise&quot; to=&quot;/business?utm_campaign=website&amp;amp;utm_content=corp-to-home-footer-for-enterprise&amp;amp;utm_medium=coursera&amp;amp;utm_source=enterprise&quot; class=&quot;rc-SubFooterSection__content-column-link-text&quot;&gt;...&lt;/a&gt; is not clickable at point (93, 542). Other element would receive the click: &lt;div class=&quot;rc-CopyrightV2 lohp-rebrand&quot;&gt;...&lt;/div&gt;
+  (Session info: MicrosoftEdge=131.0.2903.146)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [785749b8f707fe02556fa55da62a5431, clickElement {id=f.355A7E391798E74831A7CB6ECDA99436.d.31AD662910BDE5A308A4076B90F229C3.e.288}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 131.0.2903.146, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55964}, msedge: {msedgedriverVersion: 131.0.2903.146 (99fcb90c1ee..., userDataDir: C:\Users\2373652\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55964/devtoo..., se:cdpVersion: 131.0.2903.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (785749b8f707fe02556fa55da62a5431)] -&gt; link text: For Enterprise]
+Session ID: 785749b8f707fe02556fa55da62a5431
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at TestClass.NewTest.locateForEnterprise(NewTest.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>1</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestClass.NewTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>0</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.navigateBackToHome()'><b>navigateBackToHome</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>3</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.courseLanguageSelection()'><b>courseLanguageSelection</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>3</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.displayListOfLanguages()'><b>displayListOfLanguages</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>5</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.displayFirstCourseDetails()'><b>displayFirstCourseDetails</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>5</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.displaySecondCourseDetails()'><b>displaySecondCourseDetails</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>0</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.displayListOfLevel()'><b>displayListOfLevel</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>0</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.locateSearchBox()'><b>locateSearchBox</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>0</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.openWebsite()'><b>openWebsite</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>5</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.newTabSwitch()'><b>newTabSwitch</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>6</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.autoSuggestion()'><b>autoSuggestion</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>18</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.courseLevelSelection()'><b>courseLevelSelection</b><br>Test class: TestClass.NewTest</td>
+<td></td>
+<td>3</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestClass.NewTest.locateCourseForCampus()'><b>locateCourseForCampus</b><br>Test class: TestClass.NewTest</td>
+<td><div><pre>java.lang.Throwable: Method TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateForEnterprise() on instance TestClass.NewTest@2ca26d77]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1292039456", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1292039456'><pre>java.lang.Throwable: Method TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateForEnterprise() on instance TestClass.NewTest@2ca26d77]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.locateStateOnSelectingIndia()'><b>locateStateOnSelectingIndia</b><br>Test class: TestClass.NewTest</td>
+<td><div><pre>java.lang.Throwable: Method TestClass.NewTest.locateStateOnSelectingIndia() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1031118534", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1031118534'><pre>java.lang.Throwable: Method TestClass.NewTest.locateStateOnSelectingIndia() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.errorOnInvalidMobile()'><b>errorOnInvalidMobile</b><br>Test class: TestClass.NewTest</td>
+<td><div><pre>java.lang.Throwable: Method TestClass.NewTest.errorOnInvalidMobile() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace636991811", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace636991811'><pre>java.lang.Throwable: Method TestClass.NewTest.errorOnInvalidMobile() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.locateForm()'><b>locateForm</b><br>Test class: TestClass.NewTest</td>
+<td><div><pre>java.lang.Throwable: Method TestClass.NewTest.locateForm() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1552761365", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1552761365'><pre>java.lang.Throwable: Method TestClass.NewTest.locateForm() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.submitFormVerification()'><b>submitFormVerification</b><br>Test class: TestClass.NewTest</td>
+<td><div><pre>java.lang.Throwable: Method TestClass.NewTest.submitFormVerification() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace164050142", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace164050142'><pre>java.lang.Throwable: Method TestClass.NewTest.submitFormVerification() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.errorOnInvalidEmail()'><b>errorOnInvalidEmail</b><br>Test class: TestClass.NewTest</td>
+<td><div><pre>java.lang.Throwable: Method TestClass.NewTest.errorOnInvalidEmail() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1854557094", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1854557094'><pre>java.lang.Throwable: Method TestClass.NewTest.errorOnInvalidEmail() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+<tr>
+<td title='TestClass.NewTest.errorOnBlankFields()'><b>errorOnBlankFields</b><br>Test class: TestClass.NewTest</td>
+<td><div><pre>java.lang.Throwable: Method TestClass.NewTest.errorOnBlankFields() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace687498695", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace687498695'><pre>java.lang.Throwable: Method TestClass.NewTest.errorOnBlankFields() on instance TestClass.NewTest@2ca26d77 depends on not successfully finished methods 
+[TestClass.NewTest.locateCourseForCampus() on instance TestClass.NewTest@2ca26d77]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.NewTest@2ca26d77</td></tr>
+</table><p>
+</body>
+</html>
