@@ -31,12 +31,8 @@ public class Base {
 		if(br.equalsIgnoreCase("edge")){
 			driver = new EdgeDriver();
 		}
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return driver;
-	}
-	
-	public void applyImplicitWait() {
-		
-		wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 	}
 	
 }

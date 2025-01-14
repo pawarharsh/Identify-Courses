@@ -25,7 +25,7 @@ public class HomePage extends Base{
 	@FindBy(id="search-autocomplete-input")
 	WebElement searchBox;
 	
-	@FindBy(xpath="/html/body/div[2]/div/header/div/div/div[2]/div/div/div/div/div/div[2]/div/div[2]/form/div/div[1]/div")
+	@FindBy(id="react-autowhatever-1")
 	List<WebElement>list;
 
 	public void openURL() {
@@ -47,6 +47,7 @@ public class HomePage extends Base{
 		searchBox.sendKeys("Web Development");
 		Thread.sleep(5000);
         int size = list.size();
+        
         return size;
 		
 	}
@@ -54,8 +55,8 @@ public class HomePage extends Base{
 	public void click() throws InterruptedException {
 		
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("react-autowhatever-1")));
-		WebElement we=driver.findElement(By.id("react-autowhatever-1"));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"react-autowhatever-1-section-1-item-2\"]/div/div/div[2]/span")));
+		WebElement we=driver.findElement(By.xpath("//*[@id=\"react-autowhatever-1-section-1-item-2\"]/div/div/div[2]/span"));
 		we.click();
 		Thread.sleep(3000);
 	}
