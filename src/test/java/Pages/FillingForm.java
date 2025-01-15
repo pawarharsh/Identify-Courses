@@ -16,10 +16,10 @@ public class FillingForm extends Base{
 	FillingFormWithEmptyFeilds obj3;
 	FillingFormSuccessfully obj4;
 	BaseFillingForm form;
-	String filepath = "C:\\Users\\2373652\\eclipse-workspace\\Hackathon\\src\\test\\resources\\EmptyField.xlsx";
-	String filepath1 = "C:\\Users\\2373652\\eclipse-workspace\\Hackathon\\src\\test\\resources\\ValidData.xlsx";
-	String filepath2 = "C:\\Users\\2373652\\eclipse-workspace\\Hackathon\\src\\test\\resources\\InvalidMobile.xlsx";
-	String filepath3 = "C:\\Users\\2373652\\eclipse-workspace\\Hackathon\\src\\test\\resources\\InvalidEmail.xlsx";
+	String filepath = "src\\test\\resources\\EmptyField.xlsx";
+	String filepath1 = "src\\test\\resources\\ValidData.xlsx";
+	String filepath2 = "src\\test\\resources\\InvalidMobile.xlsx";
+	String filepath3 = "src\\test\\resources\\InvalidEmail.xlsx";
 	
 	String sheetName = "Sheet1";
 	
