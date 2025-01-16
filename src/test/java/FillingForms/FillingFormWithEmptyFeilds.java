@@ -27,7 +27,7 @@ public class FillingFormWithEmptyFeilds extends Base {
 		String ErrorMsg = web.getText(); // Text of the error message is stored here
 		Thread.sleep(1000);
 		File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
-		String sc="C:\\Users\\2373652\\eclipse-workspace\\Hackathon\\Screenshots\\Screenshot_of_empty_field_error.png";
+		String sc="Screenshots\\Screenshot_of_empty_field_error.png";
 		try {
 			FileUtils.copyFile(screenshot, new File(sc));
 		} catch (IOException e) {

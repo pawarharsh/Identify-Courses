@@ -29,7 +29,7 @@ public class NewTest {
 	Levels levels;
 	FillingForm form;
 
-	@BeforeClass
+	@BeforeClass(groups={"smoke","regression"})
 	@Parameters({ "browser" })
 	public void setUp(String br) {
 
@@ -38,7 +38,7 @@ public class NewTest {
 
 	}
 
-	@Test(priority = 0)
+	@Test(priority = 0, groups= {"smoke","regression"})
 	public void openWebsite() {
 		homepage = new HomePage(driver);
 
@@ -48,20 +48,20 @@ public class NewTest {
 		Assert.assertEquals(expectedUrl, actualUrl);
 	}
 
-	@Test(priority = 1, dependsOnMethods= {"openWebsite"})
+	@Test(priority = 1, dependsOnMethods= {"openWebsite"}, groups= {"smoke","regression"})
 	public void locateSearchBox() throws InterruptedException {
 		boolean searchBoxVisible = homepage.isSearchBoxVisible();
 		assertTrue(searchBoxVisible);
 	}
 
-	@Test(priority = 2, dependsOnMethods= {"locateSearchBox"})
+	@Test(priority = 2, dependsOnMethods= {"openWebsite"}, groups= {"smoke","regression"})
 	public void autoSuggestion() throws InterruptedException {
 		int size = homepage.autoSuggestionListSize();
 		homepage.click();
 		assertTrue(size > 0);
 	}
 
-	@Test(priority = 3, dependsOnMethods= {"autoSuggestion"})
+	@Test(priority = 3, dependsOnMethods= {"autoSuggestion"}, groups= {"smoke","regression"})
 	public void courseLanguageSelection() throws InterruptedException {
 		courses = new Courses(driver);
 
@@ -70,44 +70,44 @@ public class NewTest {
 		languageSelected.click();
 	}
 
-	@Test(priority = 4, dependsOnMethods= {"autoSuggestion"})
+	@Test(priority = 4, dependsOnMethods= {"autoSuggestion"}, groups= {"smoke","regression"})
 	public void courseLevelSelection() throws InterruptedException {
 		WebElement levelSelected = courses.levelSelection();
 		assertTrue(levelSelected.isEnabled());
 		levelSelected.click();
 	}
 
-	@Test(priority = 5, dependsOnMethods= {"courseLanguageSelection","courseLevelSelection"})
+	@Test(priority = 5, dependsOnMethods= {"courseLanguageSelection","courseLevelSelection"}, groups= {"regression"})
 	public void displayFirstCourseDetails() throws InterruptedException {
 		boolean res = courses.isFirstCourseDisplayed();
 		assertTrue(res);
 	}
 
-	@Test(priority = 6, dependsOnMethods= {"courseLanguageSelection","courseLevelSelection"})
+	@Test(priority = 6, dependsOnMethods= {"courseLanguageSelection","courseLevelSelection"}, groups= {"regression"})
 	public void displaySecondCourseDetails() throws InterruptedException {
 		boolean res = courses.isSecondCourseDisplayed();
 		assertTrue(res);
 	}
 
-	@Test(priority = 7, dependsOnMethods= {"autoSuggestion"})
+	@Test(priority = 7, dependsOnMethods= {"autoSuggestion"}, groups= {"regression"})
 	public void displayListOfLanguages() throws InterruptedException {
 		languages = new Languages(driver);
 		assertTrue(languages.sizeOfListOfLanguages() > 0);
 	}
 
-	@Test(priority = 8, dependsOnMethods= {"autoSuggestion"})
+	@Test(priority = 8, dependsOnMethods= {"autoSuggestion"}, groups= {"regression"})
 	public void displayListOfLevel() {
 		levels = new Levels(driver);
 
 		assertTrue(levels.sizeOfListOfLevel() > 0);
 	}
 
-	@Test(priority = 9, dependsOnMethods= {"autoSuggestion"})
+	@Test(priority = 9, dependsOnMethods= {"autoSuggestion"}, groups= {"regression"})
 	public void newTabSwitch() throws InterruptedException {
 		assertTrue(courses.isCourseOpenedInNewTab());
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 10, groups= {"smoke","regression"})
 	public void navigateBackToHome() {
 		courses.returnToHomePage();
 		String actualUrl = homepage.getUrl();
@@ -115,26 +115,26 @@ public class NewTest {
 		Assert.assertEquals(expectedUrl, actualUrl);
 	}
 
-	@Test(priority = 11, dependsOnMethods= {"navigateBackToHome"})
+	@Test(priority = 11, dependsOnMethods= {"navigateBackToHome"}, groups= {"smoke","regression"})
 	public void locateForEnterprise() {
 		assertTrue(driver.findElement(By.linkText("For Enterprise")).isDisplayed());
 		driver.findElement(By.linkText("For Enterprise")).click();
 	}
 
-	@Test(priority = 12, dependsOnMethods= {"locateForEnterprise"})
+	@Test(priority = 12, dependsOnMethods= {"locateForEnterprise"}, groups= {"smoke","regression"})
 	public void locateCourseForCampus() throws InterruptedException {
 		assertTrue(driver.findElement(By.linkText("For Campus")).isDisplayed());
 		driver.findElement(By.linkText("For Campus")).click();
 	}
 
-	@Test(priority = 16, dependsOnMethods= {"locateCourseForCampus"})
+	@Test(priority = 16, dependsOnMethods= {"locateCourseForCampus"}, groups= {"regression"})
 	public void locateForm() throws InterruptedException {
 
 		boolean res = driver.findElement(By.id("mktoForm_1512")).isDisplayed();
 		assertTrue(res);
 	}
 
-	@Test(priority = 13, dependsOnMethods= {"locateCourseForCampus"})
+	@Test(priority = 13, dependsOnMethods= {"locateCourseForCampus"}, groups= {"smoke","regression"})
 	public void errorOnInvalidEmail() throws InterruptedException {
 
 		form = new FillingForm(driver);
@@ -143,37 +143,31 @@ public class NewTest {
 		assertTrue(res);
 	}
 
-	@Test(priority = 14, dependsOnMethods= {"locateCourseForCampus"})
+	@Test(priority = 14, dependsOnMethods= {"locateCourseForCampus"}, groups= {"regression"})
 	public void errorOnInvalidMobile() throws InterruptedException {
 		boolean res = form.getErrorMsgOnInvalidPhone();
 		assertTrue(res);
 	}
 
-	@Test(priority = 15, dependsOnMethods= {"locateCourseForCampus"})
+	@Test(priority = 15, dependsOnMethods= {"locateCourseForCampus"}, groups= {"regression"})
 	public void errorOnBlankFields() throws InterruptedException {
 		boolean res = form.getErrorMsgOnNotFilling();
 		assertTrue(res);
 	}
 
-	@Test(priority = 17, dependsOnMethods= {"locateCourseForCampus"})
+	@Test(priority = 17, dependsOnMethods= {"locateCourseForCampus"}, groups= {"regression"})
 	public void locateStateOnSelectingIndia() {
 		assertTrue(driver.findElement(By.xpath("//*[@id=\"State\"]")).isDisplayed());
 	}
 
-	@Test(priority = 18, dependsOnMethods= {"locateCourseForCampus"})
+	@Test(priority = 18, dependsOnMethods= {"locateCourseForCampus"}, groups= {"smoke","regression"})
 	public void submitFormVerification() throws InterruptedException {
 		
 		boolean res = form.getSuccessMsgOnValidData();
 		assertTrue(res);
 	}
 
-	@Test(priority = 19)
-	public void takeScreenshot() {
-
-		System.out.println("This is 19th test case");
-	}
-
-	@AfterClass
+	@AfterClass(groups= {"smoke","regression"})
 	public void afterClass() {
 		driver.quit();
 	}

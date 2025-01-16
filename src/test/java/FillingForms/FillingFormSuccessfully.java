@@ -23,7 +23,7 @@ public class FillingFormSuccessfully extends Base {
 		
 		Thread.sleep(1000);
 		File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
-		String sc="C:\\Users\\2373652\\eclipse-workspace\\Hackathon\\Screenshots\\SuccessMsg.png";
+		String sc="Screenshots\\SuccessMsg.png";
 		try {
 			FileUtils.copyFile(screenshot, new File(sc));
 		} catch (IOException e) {

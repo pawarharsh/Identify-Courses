@@ -13,7 +13,6 @@ public class Languages extends Base {
 
 	WebDriver driver;
 	public Languages(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -25,10 +24,8 @@ public class Languages extends Base {
 	List<WebElement>languageCheckboxes;
 
 	public int sizeOfListOfLanguages() throws InterruptedException {
-//		WebElement showMore=driver.findElement(By.xpath("/html/body/div[2]/div/div/main/div[1]/div/div/div/div/div[1]/div/div/div/div/div/div/div/div[2]/div[2]/button/span"));
 		showMore.click();
 		Thread.sleep(5000);
-//		List<WebElement> checkboxes = driver.findElements(By.xpath("/html/body/div[2]/div/div/main/div[1]/div/div/div/div/div[1]/div/div/div/div/div/div/div/div[2]/div[1]/div[2]/div"));
 		System.out.println("-------------Languages List-----------");
 		System.out.println();
 		for (int i=0; i<languageCheckboxes.size();i++) {

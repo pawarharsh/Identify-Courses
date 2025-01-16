@@ -5,15 +5,25 @@
 	<listeners>
 		<listener class-name="TestClass.ExtentReportManager" />
 	</listeners>
-	<test thread-count="5" name="chrometest">
+	<test thread-count="5" name="RegressionTestingOnChrome">
 		<parameter name="browser" value="chrome" />
+		<groups>
+		<run>
+			<include name = "regression"/>
+		</run>
+		</groups>
 		<classes>
 			<class name="TestClass.NewTest" />
 		</classes>
 	</test> <!-- Test -->
-
-	<test thread-count="5" name="edgetest">
+	
+	<test thread-count="5" name="SmokeTestingOnEdge">
 		<parameter name="browser" value="edge" />
+		<groups>
+		<run>
+			<include name = "smoke"/>
+		</run>
+		</groups>
 		<classes>
 			<class name="TestClass.NewTest" />
 		</classes>

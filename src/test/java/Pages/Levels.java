@@ -13,7 +13,6 @@ public class Levels extends Base {
 	
 	WebDriver driver;
 	public Levels(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -22,7 +21,6 @@ public class Levels extends Base {
 	List<WebElement> levelChecks;
 
 	public int sizeOfListOfLevel() {
-//		List<WebElement> levelCheck = driver.findElements(By.xpath("/html/body/div[2]/div/div/main/div[1]/div/div/div/div/div[1]/div/div/div/div/div/div/div/div[4]/div/div[2]/div"));
 		System.out.println("------------Levels List---------------");
 		System.out.println();
 		for (int i = 0; i < levelChecks.size(); i++) {
