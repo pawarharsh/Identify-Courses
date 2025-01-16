@@ -22,11 +22,11 @@ public class Courses extends Base {
     }
 
     // WebElement for English Language selection
-    @FindBy(xpath = "//*[@id=\"cds-react-aria-18\"]")
+    @FindBy(xpath = "//span[text()='English']/parent::*")
     WebElement EnglishLanguage;
 
     // WebElement for Beginner Level selection
-    @FindBy(xpath = "//*[@id=\"cds-react-aria-50\"]")
+    @FindBy(xpath = "//span[text()='Beginner']/parent::*")
     WebElement BegineerLevel;
 
     // List of WebElements for course headings
