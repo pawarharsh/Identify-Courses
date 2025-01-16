@@ -13,53 +13,56 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Base.Base;
 
-public class HomePage extends Base{
-	
-	WebDriver driver;
-	
-	public HomePage(WebDriver driver) {
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
-	}
-	
-	@FindBy(id="search-autocomplete-input")
-	WebElement searchBox;
-	
-	@FindBy(id="react-autowhatever-1")
-	List<WebElement>list;
+public class HomePage extends Base {
+    
+    WebDriver driver;
 
-	public void openURL() {
-		driver.get(prop.getProperty("url"));
-		driver.manage().window().maximize();
-	}
-	
-	public String getUrl() {
-		return driver.getCurrentUrl();
-	}
-	
-	public boolean isSearchBoxVisible() {
-		return searchBox.isDisplayed();
-	}
-	
-	public int autoSuggestionListSize() throws InterruptedException {
-		searchBox.click();
-		Thread.sleep(5000);
-		searchBox.sendKeys("Web Development");
-		Thread.sleep(5000);
-        int size = list.size();
-        
+    // Constructor to initialize WebDriver and PageFactory elements
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+    
+    // WebElement for the search box
+    @FindBy(id = "search-autocomplete-input")
+    WebElement searchBox;
+    
+    // List of WebElements for the autocomplete suggestions
+    @FindBy(id = "react-autowhatever-1")
+    List<WebElement> list;
+
+    // Method to open the URL and maximize the browser window
+    public void openURL() {
+        driver.get(prop.getProperty("url"));
+        driver.manage().window().maximize();
+    }
+    
+    // Method to get the current URL
+    public String getUrl() {
+        return driver.getCurrentUrl();
+    }
+    
+    // Method to check if the search box is visible
+    public boolean isSearchBoxVisible() {
+        return searchBox.isDisplayed();
+    }
+    
+    // Method to get the size of the autocomplete suggestion list
+    public int autoSuggestionListSize() throws InterruptedException {
+        searchBox.click(); // Click the search box
+        Thread.sleep(5000); // Wait for suggestions to load
+        searchBox.sendKeys("Web Development"); // Enter search term
+        Thread.sleep(5000); // Wait for suggestions to update
+        int size = list.size(); // Get the size of the suggestion list
         return size;
-		
-	}
-	
-	public void click() throws InterruptedException {
-		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"react-autowhatever-1-section-1-item-2\"]/div/div/div[2]/span")));
-		WebElement we=driver.findElement(By.xpath("//*[@id=\"react-autowhatever-1-section-1-item-2\"]/div/div/div[2]/span"));
-		we.click();
-		Thread.sleep(3000);
-	}
-	
-	
+    }
+    
+    // Method to click on a specific autocomplete suggestion
+    public void click() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"react-autowhatever-1-section-1-item-2\"]/div/div/div[2]/span")));
+        WebElement we = driver.findElement(By.xpath("//*[@id=\"react-autowhatever-1-section-1-item-2\"]/div/div/div[2]/span"));
+        we.click(); // Click the suggestion
+        Thread.sleep(3000); // Wait for the action to complete
+    }
 }

@@ -12,37 +12,43 @@ import Base.Base;
 
 public class FillingFormSuccessfully extends Base {
 
-	WebDriver driver;
-	public FillingFormSuccessfully(WebDriver driver) {
-		this.driver=driver;
-	}
+    WebDriver driver;
 
-	public String getMsg() throws InterruptedException {
+    // Constructor to initialize WebDriver
+    public FillingFormSuccessfully(WebDriver driver) {
+        this.driver = driver;
+    }
 
-		String title = driver.getCurrentUrl();
-		
-		Thread.sleep(1000);
-		File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
-		String sc="Screenshots\\SuccessMsg.png";
-		try {
-			FileUtils.copyFile(screenshot, new File(sc));
-		} catch (IOException e) {
-			e.printStackTrace();
-		} 
-		System.out.println("--------Success Message----------");
-		System.out.println();
-		if(title.contains("https://www.coursera.org/campus/thank-you")) {
-			System.out.println("Success");
-			System.out.println();
-			System.out.println("---------------------------------------");
-			return "Success";
-		}
-		else {
-			System.out.println("Fail");
-			System.out.println();
-			System.out.println("---------------------------------------");
-			return "Fail";
-		}
-	}
-	
+    // Method to get the success message after form submission
+    public String getMsg() throws InterruptedException {
+
+        // Get the current URL
+        String url = driver.getCurrentUrl();
+        
+        Thread.sleep(1000);
+
+        // Take a screenshot of the success message
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String sc = "Screenshots\\SuccessMsg.png";
+        try {
+            FileUtils.copyFile(screenshot, new File(sc));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Print the success message to the console
+        System.out.println("--------Success Message----------");
+        System.out.println();
+        if (url.contains("https://www.coursera.org/campus/thank-you")) {
+            System.out.println("Success");
+            System.out.println();
+            System.out.println("---------------------------------------");
+            return "Success";
+        } else {
+            System.out.println("Fail");
+            System.out.println();
+            System.out.println("---------------------------------------");
+            return "Fail";
+        }
+    }
 }

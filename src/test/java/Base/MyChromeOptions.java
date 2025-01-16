@@ -10,8 +10,8 @@ public class MyChromeOptions {
 
 		ChromeOptions options = new ChromeOptions();
 
-      // Headless mode - to run the project without UI
-      // options.addArguments("--headless");
+		// Headless mode - to run the project without UI
+		// options.addArguments("--headless");
 
 		// Disable Chrome automation message
 		options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
