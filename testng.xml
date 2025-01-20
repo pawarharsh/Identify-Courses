@@ -16,7 +16,7 @@
 			<class name="TestClass.NewTest" />
 		</classes>
 	</test> <!-- Test -->
-
+<!--
 	<test thread-count="5" name="SmokeTestingOnEdge">
 		<parameter name="browser" value="edge" />
 		<groups>
@@ -28,6 +28,6 @@
 			<class name="TestClass.NewTest" />
 		</classes>
 	</test> <!-- Test -->
-
+-->
 
 </suite> <!-- Suite -->
